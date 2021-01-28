@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#47535E">
+
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_id"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="18.5dp"
+        android:layout_marginEnd="18.5dp"
+        android:hint="Name"
+        android:textColor="#fff"
+        android:textColorHint="#EAF0F1" />
+
+    <EditText
+        android:id="@+id/editText_CC"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_email"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="18.5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="18.5dp"
+        android:hint="Course Count"
+        android:inputType="number"
+        android:textColor="#fff"
+        android:textColorHint="#EAF0F1" />
+
+    <EditText
+        android:id="@+id/editText_id"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="18.5dp"
+        android:layout_marginEnd="18.5dp"
+        android:layout_marginTop="31dp"
+
+        android:hint="Id"
+        android:inputType="number"
+        android:textColor="#fff"
+        android:textColorHint="#EAF0F1" />
+
+    <EditText
+        android:id="@+id/editText_email"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="18.5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="18.5dp"
+        android:hint="Email"
+        android:textColor="#fff"
+        android:textColorHint="#EAF0F1" />
+
+    <Button
+        android:id="@+id/button_viewAll"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_delete"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="#E74292"
+        android:layout_marginStart="18.5dp"
+        android:layout_marginEnd="18.5dp"
+        android:text="View All"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18.5dp"
+        android:layout_marginEnd="18.5dp"
+        android:layout_below="@+id/editText_CC"
+        android:layout_marginTop="191dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="#437291"
+        android:text="Add Data"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/button_view"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_add"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="18.5dp"
+        android:layout_marginEnd="18.5dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="#10A881"
+        android:text="View"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/button_update"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_view"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="18.5dp"
+        android:layout_marginEnd="18.5dp"
+        android:backgroundTint="#F3B431"
+        android:text="Update"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_update"
+        android:layout_marginStart="18.5dp"
+        android:layout_marginEnd="18.5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="#E44236"
+        android:text="Delete"
+        android:textColor="#fff" />
+
+
+</RelativeLayout>
