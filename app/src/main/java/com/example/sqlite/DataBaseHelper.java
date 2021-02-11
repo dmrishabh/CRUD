@@ -2,8 +2,10 @@ package com.example.sqlite;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.strictmode.SqliteObjectLeakedViolation;
 
 import androidx.annotation.Nullable;
 
@@ -68,6 +70,30 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return true;
     }
 
+    public Cursor getData(String id){
+
+        SQLiteDatabase database = this.getWritableDatabase();
+        String query = "SELECT * FROM "+TABLE_NAME+" WHERE ID='"+id+"'";
+        Cursor cursor = database.rawQuery(query,null);
+        return cursor;
+
+    }
+
+    public  Integer deleteData(String id){
+
+        SQLiteDatabase database = this.getWritableDatabase();
+        return database.delete(TABLE_NAME,"ID=?", new String[]{id});
+
+
+    }
+
+    public Cursor getAllData (){
+
+        SQLiteDatabase database= this.getWritableDatabase();
+        Cursor cursor = database.rawQuery("SELECT * FROM "+TABLE_NAME,null);
+        return cursor;
+
+    }
 }
 
 
