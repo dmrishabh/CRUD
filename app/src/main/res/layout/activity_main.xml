@@ -73,15 +73,7 @@
         android:text="View"
         android:textColor="#fff" />
 
-    <Button
-        android:id="@+id/button_viewAll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/button_delete"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#E74292"
-        android:text="View All"
-        android:textColor="#fff" />
+
 
     <Button
         android:id="@+id/button_delete"
@@ -103,6 +95,15 @@
         android:layout_marginBottom="2dp"
         android:backgroundTint="#F3B431"
         android:text="Update"
+        android:textColor="#fff" />
+    <Button
+        android:id="@+id/button_viewAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_delete"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#E74292"
+        android:text="View All"
         android:textColor="#fff" />
 
 </RelativeLayout>

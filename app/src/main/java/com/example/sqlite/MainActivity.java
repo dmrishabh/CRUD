@@ -45,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String id = edId.getText().toString();
+                if (id.equals(String.valueOf(""))){
+                    edId.setError("Enter ID ");
+                    return;
+                }
                 boolean isInserted = mydb.insertData(edName.getText().toString(), edEmail.getText().toString(), edcc.getText().toString());
                 if (isInserted == true)
                     Toast.makeText(MainActivity.this, "Data Added Successfully", Toast.LENGTH_SHORT).show();
@@ -110,28 +115,40 @@ public class MainActivity extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isUpdate = mydb.updateData(edId.getText().toString(),
-                                                   edName.getText().toString(),
-                                                   edEmail.getText().toString(),
-                                                   edcc.getText().toString());
-                if(isUpdate== true){
-                    Toast.makeText(MainActivity.this,"Data Updated Successfully",Toast.LENGTH_SHORT).show();
+                String id = edId.getText().toString();
+                if (id.equals(String.valueOf(""))){
+                    edId.setError("Enter ID to be Updated");
+                    return;
                 }
-                else {Toast.makeText(MainActivity.this,"Oops",Toast.LENGTH_SHORT).show();}
+                boolean isUpdate = mydb.updateData(edId.getText().toString(),
+                        edName.getText().toString(),
+                        edEmail.getText().toString(),
+                        edcc.getText().toString());
+                if (isUpdate == true) {
+                    Toast.makeText(MainActivity.this, "Data Updated Successfully", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "Oops", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
 
-    public void delete(){
+    public void delete() {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Integer deletedRow = mydb.deleteData(edId.getText().toString());
-                if(deletedRow > 0 ) {
-                 Toast.makeText(MainActivity.this,"Deleted",Toast.LENGTH_SHORT).show();
-
+                String id = edId.getText().toString();
+                if (id.equals(String.valueOf(""))){
+                    edId.setError("Enter ID to be deleted");
+                    return;
                 }
-                else { Toast.makeText(MainActivity.this,"Oops",Toast.LENGTH_SHORT).show(); }
+                Integer deletedRow = mydb.deleteData(edId.getText().toString());
+                if (deletedRow > 0) {
+                    Toast.makeText(MainActivity.this, "Deleted", Toast.LENGTH_SHORT).show();
+
+                } else {
+                    Toast.makeText(MainActivity.this, "This Id not found", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -147,6 +164,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+
+
 
 
 
